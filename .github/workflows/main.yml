@@ -1,4 +1,4 @@
-name: Python application test with Github Actions
+name: Python application test with GitHub Actions
 on: [push]
 jobs:
   build:
@@ -6,7 +6,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: set up Python 3.8
-      - uses: actions/setup-python@v1
+        uses: actions/setup-python@v1
         with:
           python-version: 3.8
       - name: Install dependencies
@@ -18,7 +18,7 @@ jobs:
       - name: Test with Pytest
         run: |
           make test
-      - name: Format code with python black
+      - name: Format code with Python black
         run: |
           make format
   
